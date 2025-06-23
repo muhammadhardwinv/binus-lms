@@ -2,22 +2,14 @@
 
 import { Calendar } from '@/components/ui/calendar';
 import { Card, CardContent } from '@/components/ui/card';
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
 import * as React from 'react';
 
 export const description = 'An interactive area chart';
 
 export function CalendarDemo() {
     const [date, setDate] = React.useState<Date | undefined>(new Date());
-    return (
-        <Calendar
-            mode="single"
-            selected={date}
-            onSelect={setDate}
-            // className="h-[60vh] flex-1 rounded-md border align-middle shadow-sm"
-            className="h-[60vh] flex-1 rounded-md border shadow-sm"
-            captionLayout="dropdown"
-        />
-    );
+    return <Calendar mode="single" selected={date} onSelect={setDate} className="flex-1 rounded-md border shadow-sm" captionLayout="dropdown" />;
 }
 
 export function ChartAreaInteractive() {
@@ -33,22 +25,21 @@ export function ChartAreaInteractive() {
     return (
         <div className="flex items-center justify-center gap-6 px-1 *:data-[slot=card]:bg-gradient-to-t *:data-[slot=card]:from-primary/5 *:data-[slot=card]:to-card *:data-[slot=card]:shadow-xs sm:flex-wrap lg:px-6 dark:*:data-[slot=card]:bg-card">
             <div
-                className="col-span-1 h-[60vh] max-w-[32vw] flex-1 overflow-y-auto rounded-lg border bg-muted/20 p-1 @5xl/main:col-span-1"
+                className="col-span-1 h-[50vh] max-w-xl flex-1 overflow-y-auto rounded-lg border bg-muted/20 p-1 @5xl/main:col-span-1"
                 ref={sliderRef}
                 onWheel={handleWheel}
             >
                 <div className="flex justify-center py-2">
-                    <a href="" className="text-md mt-2 mb-2 text-center font-semibold tabular-nums @[250px]/card:text-3xl">
+                    <a href="" className="text-md text-center font-semibold tabular-nums @[250px]/card:text-3xl">
                         Recent Activity
                     </a>
                 </div>
-
                 {Array.from({ length: 20 }).map((_, index) => (
-                    <div key={index} className="pt-1">
+                    <div key={index} className="pt-1 md:basis-1/2">
                         <div className="p-1">
                             <Card>
-                                <CardContent className="ml-2 flex items-center justify-start p-6">
-                                    <span className="text-md font-semibold">{index + 1}</span>
+                                <CardContent className="ml-2 flex w-xl items-center justify-start p-6">
+                                    <span className="justify-font-semibold text-md flex">{index + 1}</span>
                                 </CardContent>
                             </Card>
                         </div>
@@ -56,13 +47,13 @@ export function ChartAreaInteractive() {
                 ))}
             </div>
             <div
-                className="col-span-1 h-[60vh] max-w-[32vw] flex-1 overflow-y-auto rounded-lg border bg-muted/20 p-1 @5xl/main:col-span-1"
+                className="col-span-1 h-[50vh] max-w-xl flex-1 overflow-y-auto rounded-lg border bg-muted/20 p-1 @5xl/main:col-span-1"
                 ref={sliderRef}
                 onWheel={handleWheel}
             >
                 {/* Centered Title */}
                 <div className="flex justify-center py-2">
-                    <a href="" className="text-md mt-2 mb-2 text-center font-semibold tabular-nums @[250px]/card:text-3xl">
+                    <a href="" className="text-md mt-2 text-center font-semibold tabular-nums @[250px]/card:text-3xl">
                         Assignment
                     </a>
                 </div>

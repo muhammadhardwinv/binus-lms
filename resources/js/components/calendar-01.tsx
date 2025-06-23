@@ -8,12 +8,6 @@ export default function Calendar01() {
   )
 
   return (
-    <Calendar
-      mode="single"
-      defaultMonth={date}
-      selected={date}
-      onSelect={setDate}
-      className="rounded-lg border shadow-sm"
-    />
-  )
+      <Calendar mode="single" defaultMonth={date} selected={date} onSelect={setDate} className="mt-8 h-[60vh] flex-1 rounded-md border shadow-sm" />
+  );
 }
