@@ -1,0 +1,59 @@
+import { Card, CardContent } from '@/components/ui/card';
+import { type SharedData } from '@/types';
+import { Head, Link, usePage } from '@inertiajs/react';
+
+export default function Login() {
+    const { auth } = usePage<SharedData>().props;
+
+    return (
+        <>
+            <Head title="Sign In">
+                <link rel="preconnect" href="https://fonts.bunny.net" />
+                <link href="https://fonts.bunny.net/css?family=instrument-sans:400,500,600" rel="stylesheet" />
+            </Head>
+
+            <div
+                className="flex min-h-screen items-center justify-end bg-cover bg-center p-8"
+                style={{
+                    backgroundImage: 'url(/images/background.jpg)', // <-- adjust the image path
+                }}
+            >
+                <Card className="w-[400px]">
+                    <CardContent className="p-6">
+                        <nav className="flex flex-col gap-4">
+                            {auth.user ? (
+                                <Link
+                                    href={route('dashboard')}
+                                    className="rounded-sm border border-[#19140035] px-5 py-2 text-sm text-[#1b1b18] hover:border-[#1915014a] dark:border-[#3E3E3A] dark:text-[#EDEDEC] dark:hover:border-[#62605b]"
+                                >
+                                    Dashboard
+                                </Link>
+                            ) : (
+                                <div>
+                                    <a className="block text-center text-lg font-bold">
+                                        Welcome! <br />
+                                        Please Sign In
+                                    </a>
+                                    <div className="m-4 rounded-sm border border-[#19140035] p-8 px-5 py-2 text-sm text-[#1b1b18] hover:border-[#1915014a] dark:border-[#3E3E3A] dark:text-[#EDEDEC] dark:hover:border-[#62605b]">
+                                        Sign In
+                                    </div>
+                                    <div className="m-4 rounded-sm border border-[#19140035] px-5 py-2 text-sm text-[#1b1b18] hover:border-[#1915014a] dark:border-[#3E3E3A] dark:text-[#EDEDEC] dark:hover:border-[#62605b]">
+                                        Password
+                                    </div>
+                                    <div className="flex items-center justify-center">
+                                        <Link
+                                            href={route('page')}
+                                            className="w-[100px] rounded-sm border border-[#19140035] object-center px-5 py-2 text-center text-sm text-[#1b1b18] hover:border-[#1915014a] dark:border-[#3E3E3A] dark:text-[#EDEDEC] dark:hover:border-[#62605b]"
+                                        >
+                                            Login
+                                        </Link>
+                                    </div>
+                                </div>
+                            )}
+                        </nav>
+                    </CardContent>
+                </Card>
+            </div>
+        </>
+    );
+}
