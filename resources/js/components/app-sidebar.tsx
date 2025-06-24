@@ -26,11 +26,12 @@ import { NavMain } from '@/components/nav-main';
 import { NavSecondary } from '@/components/nav-secondary';
 import { NavUser } from '@/components/nav-user';
 import { Sidebar, SidebarContent, SidebarFooter, SidebarHeader, SidebarMenu, SidebarMenuButton, SidebarMenuItem } from '@/components/ui/sidebar';
+import { Link } from '@inertiajs/react';
 
 const data = {
     user: {
-        name: 'Michael B.',
-        email: 'm@b.com',
+        name: 'Sofia Davis',
+        email: 'sofia.davis@g.c',
         avatar: '/avatars/shadcn.jpg',
     },
     navMain: [
@@ -134,10 +135,10 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
                 <SidebarMenu>
                     <SidebarMenuItem>
                         <SidebarMenuButton asChild className="data-[slot=sidebar-menu-button]:!p-1.5">
-                            <a href="#">
+                            <Link href="dashboard">
                                 <img src="assets/logo-bits.png" className="h-10 w-10" alt="BITS Logo" />
                                 <span className="text-xl font-bold">BITS</span>
-                            </a>
+                            </Link>
                         </SidebarMenuButton>
                     </SidebarMenuItem>
                 </SidebarMenu>

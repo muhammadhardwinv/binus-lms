@@ -13,8 +13,8 @@ export function CalendarDemo() {
             mode="single"
             selected={date}
             onSelect={setDate}
-            // className="h-[60vh] flex-1 rounded-md border align-middle shadow-sm"
             className="h-[60vh] flex-1 rounded-md border shadow-sm"
+            // className="rounded-mg flex-1 border shadow-sm"
             captionLayout="dropdown"
         />
     );
@@ -34,6 +34,7 @@ export function ChartAreaInteractive() {
         <div className="flex items-center justify-center gap-6 px-1 *:data-[slot=card]:bg-gradient-to-t *:data-[slot=card]:from-primary/5 *:data-[slot=card]:to-card *:data-[slot=card]:shadow-xs sm:flex-wrap lg:px-6 dark:*:data-[slot=card]:bg-card">
             <div
                 className="col-span-1 h-[60vh] max-w-[32vw] flex-1 overflow-y-auto rounded-lg border bg-muted/20 p-1 @5xl/main:col-span-1"
+                // className="col-span-1 h-[52vh] max-w-[32vw] flex-1 overflow-y-auto rounded-lg border bg-muted/20 p-1 @5xl/main:col-span-1"
                 ref={sliderRef}
                 onWheel={handleWheel}
             >
@@ -57,6 +58,7 @@ export function ChartAreaInteractive() {
             </div>
             <div
                 className="col-span-1 h-[60vh] max-w-[32vw] flex-1 overflow-y-auto rounded-lg border bg-muted/20 p-1 @5xl/main:col-span-1"
+                // className="col-span-1 h-[52vh] max-w-[32vw] flex-1 overflow-y-auto rounded-lg border bg-muted/20 p-1 @5xl/main:col-span-1"
                 ref={sliderRef}
                 onWheel={handleWheel}
             >

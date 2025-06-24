@@ -27,31 +27,20 @@ export function LowerAreaInteractive() {
                     <div data-slot="card-header" className="flex flex-row items-center px-6">
                         <div className="flex items-center gap-4">
                             <span data-slot="avatar" className="relative flex size-8 shrink-0 overflow-hidden rounded-full border">
-                                <img data-slot="avatar-image" className="aspect-square size-full" alt="Image" src="/avatars/01.png" />
+                                <img src="assets/logo-user.png" alt="" />
                             </span>
                             <div className="flex flex-col gap-0.5">
                                 <p className="text-sm leading-none font-medium">Sofia Davis</p>
-                                <p className="text-xs text-muted-foreground">m@example.com</p>
+                                <p className="text-xs text-muted-foreground">sofia.davis@g.c</p>
                             </div>
                         </div>
                         <button
                             className="ml-auto size-8 rounded-full bg-secondary text-secondary-foreground shadow-xs hover:bg-secondary/80"
                             type="button"
                         >
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                width="24"
-                                height="24"
-                                fill="none"
-                                stroke="currentColor"
-                                strokeWidth="2"
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                className="lucide lucide-plus"
-                            >
-                                <path d="M5 12h14" />
-                                <path d="M12 5v14" />
-                            </svg>
+                            <a href="#" className="text-2xl">
+                                +
+                            </a>
                             <span className="sr-only">New message</span>
                         </button>
                     </div>
@@ -86,23 +75,11 @@ export function LowerAreaInteractive() {
                             />
                             <button
                                 type="submit"
-                                disabled
                                 className="absolute top-1/2 right-2 size-6 -translate-y-1/2 rounded-full bg-primary text-primary-foreground shadow-xs hover:bg-primary/90"
                             >
-                                <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    width="24"
-                                    height="24"
-                                    fill="none"
-                                    stroke="currentColor"
-                                    strokeWidth="2"
-                                    strokeLinecap="round"
-                                    strokeLinejoin="round"
-                                    className="lucide lucide-arrow-up size-3.5"
-                                >
-                                    <path d="m5 12 7-7 7 7" />
-                                    <path d="M12 19V5" />
-                                </svg>
+                                <a href="#" type="submit text-2xl">
+                                    +
+                                </a>
                                 <span className="sr-only">Send</span>
                             </button>
                         </form>

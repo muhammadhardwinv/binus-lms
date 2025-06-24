@@ -42,7 +42,7 @@ export default function Login() {
                                     </div>
                                     <div className="flex items-center justify-center">
                                         <Link
-                                            href={route('page')}
+                                            href={route('dashboard')}
                                             className="w-[100px] rounded-sm border border-[#19140035] object-center px-5 py-2 text-center text-sm text-[#1b1b18] hover:border-[#1915014a] dark:border-[#3E3E3A] dark:text-[#EDEDEC] dark:hover:border-[#62605b]"
                                         >
                                             Login
