@@ -37,12 +37,12 @@ const data = {
     navMain: [
         {
             title: 'Dashboard',
-            url: '#',
+            url: 'dashboard',
             icon: IconDashboard,
         },
         {
             title: 'Courses',
-            url: '#',
+            url: 'courses',
             icon: IconArticle,
         },
         {
@@ -59,54 +59,6 @@ const data = {
             title: 'Events',
             url: '#',
             icon: IconCalendarEvent,
-        },
-    ],
-    navClouds: [
-        {
-            title: 'Capture',
-            icon: IconCamera,
-            isActive: true,
-            url: '#',
-            items: [
-                {
-                    title: 'Active Proposals',
-                    url: '#',
-                },
-                {
-                    title: 'Archived',
-                    url: '#',
-                },
-            ],
-        },
-        {
-            title: 'Proposal',
-            icon: IconFileDescription,
-            url: '#',
-            items: [
-                {
-                    title: 'Active Proposals',
-                    url: '#',
-                },
-                {
-                    title: 'Archived',
-                    url: '#',
-                },
-            ],
-        },
-        {
-            title: 'Prompts',
-            icon: IconFileAi,
-            url: '#',
-            items: [
-                {
-                    title: 'Active Proposals',
-                    url: '#',
-                },
-                {
-                    title: 'Archived',
-                    url: '#',
-                },
-            ],
         },
     ],
     navSecondary: [

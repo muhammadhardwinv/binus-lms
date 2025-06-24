@@ -12,12 +12,8 @@ export default function Login() {
                 <link href="https://fonts.bunny.net/css?family=instrument-sans:400,500,600" rel="stylesheet" />
             </Head>
 
-            <div
-                className="flex min-h-screen items-center justify-end bg-cover bg-center p-8"
-                style={{
-                    backgroundImage: 'url(/images/background.jpg)', // <-- adjust the image path
-                }}
-            >
+            <div className="relative flex min-h-screen w-full items-center justify-end overflow-hidden p-8">
+                <img src="/assets/login-bg.jpg" alt="Login Background" className="absolute inset-0 z-[-1] h-full w-full object-cover" />
                 <Card className="w-[400px]">
                     <CardContent className="p-6">
                         <nav className="flex flex-col gap-4">

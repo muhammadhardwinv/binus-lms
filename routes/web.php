@@ -12,9 +12,9 @@ Route::get('/dashboard', function () {
 })->name("dashboard");
 
 
-Route::get('/course', function () {
-    return Inertia::render('course');
-})->name("course");
+Route::get('/courses', function () {
+    return Inertia::render('courses');
+})->name("courses");
 
 
 // require __DIR__.'/settings.php';
